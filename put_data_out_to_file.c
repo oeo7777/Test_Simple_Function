@@ -2,15 +2,16 @@
 #include<stdlib.h>
 #include <string.h>
 
-char s[2] = {2, 5};
+#define Len_s    2
+unsigned int s[Len_s] = {0xcdbd0acf, 0xdcabab}; //{11111111111111111011110110110011, 11111111111111110011101100000000};
 
 int File_Out(void){
 
-    printf("p1 = %d, p2 = %d \n", s[0], s[1]);
+    printf("p1 = %x, p2 = %x \n", s[0], s[1]);
 
 
     FILE *pf = fopen("/home/sam.tsai/code/Test_Simple_Function/f1.txt","w");
-    fwrite(s, 1, strlen(s), pf);
+    fwrite(s, 1, sizeof(s), pf);
     
     fclose(pf);
 
