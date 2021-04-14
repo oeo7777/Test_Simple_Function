@@ -16,5 +16,6 @@ unsigned int getCheckSum(CSU *cs);
 void putChunk(CSU *cs, unsigned int chunk);
 
 extern CSU checkSum_Cal;
-extern int Load_and_cal_checksum(void);
+extern int Load_and_cal_checksum(char *out_name);
+extern int Load_and_cal_Fuse_checksum(char *out_name);
 #endif
